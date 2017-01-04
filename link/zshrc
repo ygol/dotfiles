@@ -101,3 +101,11 @@ ensure_tmux_is_running() {
 }
 
 ensure_tmux_is_running
+
+# my Aliases
+# convenience aliases for editing configs
+alias ev='vim ~/.vimrc'
+alias et='vim ~/.tmux.conf'
+alias ez='vim ~/.zshrc'
+
+alias cl='clear'
