@@ -6,8 +6,8 @@
 [hub]
         protocol = https
 [user]
-        name = Marcus Ramberg
-        email = marcus@nordaaker.com
+        name = Yves Goldberg
+        email = admin@ygol.com
         helper = cache
 [alias]
     promote = !$ZSH/bin/git-promote
