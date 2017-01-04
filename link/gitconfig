@@ -7,8 +7,8 @@
 [hub]
   protocol = https
 [user]
-  name = Marcus Ramberg
-  email = marcus.ramberg@gmail.com
+  name = Yves Goldberg
+  email = admin@ygol.com
 [alias]
   promote = !$ZSH/bin/git-promote
   wtf     = !$ZSH/bin/git-wtf
