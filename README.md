@@ -4,13 +4,13 @@ My OS X / Ubuntu / Debian dotfiles.
 
 ## What's this?
 
-This is a fork of of (github.com/cowboy/dotfiles)[Cowboy's dotfiles], adopted to 
+This is a fork of of (github.com/marcusramberg/dotfiles) itself forking (github.com/cowboy/dotfiles)[Cowboy's dotfiles], adapted to 
 zsh, and debian, as well as my config files.
 
 That command is [~/bin/dotfiles][dotfiles], and this is my "dotfiles" Git repo.
 
-[dotfiles]: https://github.com/marcusramberg/dotfiles/blob/master/bin/dotfiles
-[bin]: https://github.com/marcusramberg/dotfiles/tree/master/bin
+[dotfiles]: https://github.com/ygol/dotfiles/blob/master/bin/dotfiles
+[bin]: https://github.com/ygol/dotfiles/tree/master/bin
 
 ## What, exactly, does the "dotfiles" command do?
 
@@ -38,7 +38,7 @@ Notes:
 * You need to have installed [XCode Command Line Tools](https://developer.apple.com/downloads/index.action?=command%20line%20tools), which are available as a separate, optional (and _much smaller_) download from XCode.
 
 ```sh
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/marcusramberg/dotfiles/master/bin/dotfiles)" && source ~/.zshrc
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ygol/dotfiles/master/bin/dotfiles)" && source ~/.zshrc
 ```
 
 ### Ubuntu
@@ -49,7 +49,7 @@ Notes:
 
 ```sh
 sudo apt-get -qq update && sudo apt-get -qq upgrade && sudo apt-get -qq install curl ansible && echo &&
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/marcusramberg/dotfiles/master/bin/dotfiles)" && source ~/.zshrc
+bash -c "$(curl -fsSL https://raw.githubusercontent.com/ygol/dotfiles/master/bin/dotfiles)" && source ~/.zshrc
 ```
 
 ## The "init" step
@@ -99,16 +99,16 @@ These things will be installed, but _only_ if they aren't already.
 All the zsh config is handled by oh-my-zsh, it's imported into libs/oh-my-zsh as a git submodule.
 
 ## The ~/ "copy" step
-Any file in the `copy` subdirectory will be copied into `~/`. Any file that _needs_ to be modified with personal information (like [.gitconfig](https://github.com/marcusramberg/dotfiles/blob/master/copy/.gitconfig) which contains an email address and private key) should be _copied_ into `~/`. Because the file you'll be editing is no longer in `~/.dotfiles`, it's less likely to be accidentally committed into your public dotfiles repo.
+Any file in the `copy` subdirectory will be copied into `~/`. Any file that _needs_ to be modified with personal information (like [.gitconfig](https://github.com/ygol/dotfiles/blob/master/copy/.gitconfig) which contains an email address and private key) should be _copied_ into `~/`. Because the file you'll be editing is no longer in `~/.dotfiles`, it's less likely to be accidentally committed into your public dotfiles repo.
 
 ## The ~/ "link" step
 Any file in the `link` subdirectory gets symbolically linked with `ln -s` into `~/`. Edit these, and you change the file in the repo. Don't link files containing sensitive data, or you might accidentally commit that data!
 
 ## Aliases and Functions
-To keep things easy, the `~/.zshrc` file is extremely simple, and should never need to be modified. Instead, add your aliases, functions, settings, etc into one of the files in the `source` subdirectory, or add a new file. They're all automatically sourced when a new shell is opened. Take a look, I have [a lot of aliases and functions](https://github.com/marcusramberg/dotfiles/tree/master/source). I even have a [fancy prompt](https://github.com/marcusramberg/dotfiles/blob/master/source/50_prompt.sh) that shows the current directory, time and current git/svn repo status.
+To keep things easy, the `~/.zshrc` file is extremely simple, and should never need to be modified. Instead, add your aliases, functions, settings, etc into one of the files in the `source` subdirectory, or add a new file. They're all automatically sourced when a new shell is opened. Take a look, I have [a lot of aliases and functions](https://github.com/ygol/dotfiles/tree/master/source). I even have a [fancy prompt](https://github.com/ygol/dotfiles/blob/master/source/50_prompt.sh) that shows the current directory, time and current git/svn repo status.
 
 ## Scripts
-In addition to the aforementioned [dotfiles][dotfiles] script, there are a few other [scripts][bin]. This includes [ack](https://github.com/petdance/ack), which is a [git submodule](https://github.com/marcusramberg/dotfiles/tree/master/libs).
+In addition to the aforementioned [dotfiles][dotfiles] script, there are a few other [scripts][bin]. This includes [ack](https://github.com/petdance/ack), which is a [git submodule](https://github.com/ygol/dotfiles/tree/master/libs).
 
 * [dotfiles][dotfiles] - (re)initialize dotfiles. It might ask for your password (for `sudo`).
 * [src](https://github.com/marcusramberg/dotfiles/blob/master/link/.bashrc#L6-15) - (re)source all files in `source` directory
@@ -126,6 +126,8 @@ SVN repos display as **[rev1:rev2]** where rev1 and rev2 are:
 **rev2** revision
 
 ## Inspiration
+
+<https://github.com/marcusramberg/dotfiles>
 <https://github.com/gf3/dotfiles>  
 <https://github.com/mathiasbynens/dotfiles>  
 (and 15+ years of accumulated crap)
