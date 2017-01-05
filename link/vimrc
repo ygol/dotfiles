@@ -81,6 +81,11 @@ colorscheme onedark
 filetype plugin indent on
 syntax on
 set number
+set relativenumber
+autocmd InsertEnter * :set number norelativenumber
+autocmd InsertLeave * :set relativenumber
+
+
 set mouse=
 set mousehide
 
@@ -265,6 +270,7 @@ nmap <silent> <leader>g :TestVisit<CR>
 
 let test#strategy="neovim"
 
+" ###############
 " Ygol ADDED
 " ###############
 " automatically rebalance windows on vim resize
@@ -272,7 +278,7 @@ autocmd VimResized * :wincmd =
 "## Hacks from https://thoughtbot.com/upcase/videos/onramp-to-vim-configuration
 ""
 
-" Easily edit and source my vimrc.local file
+" Easily edit and source my vimrc file
 nmap <leader>vr :tabe $MYVIMRC<cr>
 nmap <leader>so :source $MYVIMRC<cr>
 "
@@ -294,3 +300,8 @@ cabbrev h tab h
 autocmd FileType python map <buffer> <F5> :call Flake8()<CR>
 " Automatically execute flake8 validation on python file write
 autocmd BufWritePost *.py call Flake8()
+
+"Value for snippet
+let g:snips_author="Yves, Goldberg"
+"" Shortcut to reload snippets
+noremap <silent><F6> :call ResetSnippets()<CR>:call GetSnippets(snippets_dir, &ft)<CR>
