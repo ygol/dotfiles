@@ -242,3 +242,24 @@ nmap <silent> <leader>l :TestLast<CR>
 nmap <silent> <leader>g :TestVisit<CR>
 
 let test#strategy="neovim"
+
+" Ygol ADDED
+" ###############
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+"## Hacks from https://thoughtbot.com/upcase/videos/onramp-to-vim-configuration
+""
+
+" Easily edit and source my vimrc.local file
+nmap <leader>vr :tabe $MYVIMRC<cr>
+nmap <leader>so :source $MYVIMRC<cr>
+"
+" " Esc when in insert mode
+imap jk <esc>
+imap kj <esc>
+"
+" Bind `q` to close the buffer for help files
+autocmd Filetype help nnoremap <buffer> q :q<CR>
+"
+" Copy file to register
+map <Leader>co ggVG"*y

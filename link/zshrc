@@ -6,7 +6,8 @@ ZSH_CUSTOM=$HOME/.dotfiles/conf/zsh
 # Set name of the theme to load.
 DEFAULT_USER='ygol'
 
-ZSH_THEME="agnoster"
+#ZSH_THEME="agnoster"
+ZSH_THEME="3den"
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
