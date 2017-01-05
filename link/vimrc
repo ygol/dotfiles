@@ -66,6 +66,11 @@ call plug#begin('~/.vim/plugged')
 
 " My Plugins
 Plug 'nvie/vim-flake8'
+Plug 'garbas/vim-snipmate'
+
+
+
+
 
 " Initialize plugin system
 call plug#end()
@@ -94,7 +99,9 @@ set clipboard=unnamed
 set directory=/tmp
 set pastetoggle=<leader>v
 
-set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+"set statusline=%<\ %n:%f\ %m%r%y%=%-35.(line:\ %l\ of\ %L,\ col:\ %c%V\ (%P)%)
+set laststatus=2
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]\ [BUF=%n]\ %{strftime(\"%d-%m-%Y\ %H:%M:%S\",getftime(expand(\"%:p\")))}
 
 " Airline
 let g:airline#extensions#tabline#enabled = 0
@@ -283,3 +290,7 @@ map <Leader>co ggVG"*y
 cabbrev help tab help
 cabbrev h tab h
 
+" Vim Flake8 shortcut change to F5 to reflect old pep8 plugin
+autocmd FileType python map <buffer> <F5> :call Flake8()<CR>
+" Automatically execute flake8 validation on python file write
+autocmd BufWritePost *.py call Flake8()
