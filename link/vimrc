@@ -50,21 +50,30 @@ Bundle 'tpope/vim-commentary'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'vim-pandoc/vim-pandoc'
 Bundle 'hokaccha/vim-prove'
-Bundle 'vim-pandoc/vim-pandoc-syntax' 
+Bundle 'vim-pandoc/vim-pandoc-syntax'
 Bundle 'vim-perl/vim-perl'
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'yko/mojo.vim' 
+Bundle 'yko/mojo.vim'
 Bundle 'mivok/vimtodo'
 Bundle 'zah/nimrod.vim'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'janko-m/vim-test'
 
+" Let's switch to Vim-Plug
+
+" Specify a directory for plugins
+call plug#begin('~/.vim/plugged')
+
+" My Plugins
+Plug 'nvie/vim-flake8'
+
+" Initialize plugin system
+call plug#end()
+
 
 
 colorscheme onedark
- 
 filetype plugin indent on
- 
 syntax on
 set number
 set mouse=
@@ -111,7 +120,7 @@ let g:pandoc#modules#disabled = ["folding"]
 let g:pandoc#formatting#textwidth = 79
 
 
-autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1 
+autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
 autocmd FileType ruby,eruby let g:rubycomplete_classes_in_global = 1
 autocmd FileType ruby,eruby let g:rubycomplete_rails = 1
 autocmd BufNewFile,BufReadPost *.go set filetype=go
@@ -125,10 +134,10 @@ au BufRead,BufNewFile *.md,*.markdown setlocal textwidth=79 wrap linebreak nolis
 
 if has("autocmd")
   au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g'\"" | endif
-endif 
+endif
 
 
-:nmap <leader>a :Ack 
+:nmap <leader>a :Ack
 :nmap <silent> <leader>d <Plug>DashGlobalSearch
 :nmap <silent> <leader>p :TagbarToggle<cr>
 :nmap <silent> <leader>n :cnext<cr>
@@ -186,7 +195,6 @@ map <space> viw
 command! Fuck w !sudo tee % >/dev/null
 
 noremap <C-_> :call AckSearch()<CR>
- 
 function! AckSearch()
   let a:top_level = split(expand("%"), "/")
   let a:query = getline("'<")
