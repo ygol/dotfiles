@@ -142,6 +142,13 @@ let g:ctrlp_switch_buffer = 0
 let g:ctrlp_working_path_mode = 2
 let g:ctrlp_cmd = 'CtrlPMRUFile'
 
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore .hg
+      \ --ignore .DS_Store
+      \ --ignore "**/*.pyc"
+      \ -g ""'
 
 if $TERM_PROGRAM =~ "iTerm"
   if exists('$TMUX')
@@ -263,3 +270,8 @@ autocmd Filetype help nnoremap <buffer> q :q<CR>
 "
 " Copy file to register
 map <Leader>co ggVG"*y
+
+" Open help in new tab
+cabbrev help tab help
+cabbrev h tab h
+
