@@ -3,11 +3,12 @@ export PATH=~/.dotfiles/bin:$PATH
 ZSH=$HOME/.dotfiles/libs/oh-my-zsh
 ZSH_CUSTOM=$HOME/.dotfiles/conf/zsh
 
+
 # Set name of the theme to load.
 DEFAULT_USER='ygol'
 
-#ZSH_THEME="agnoster"
-ZSH_THEME="3den"
+ZSH_THEME="agnoster"
+#ZSH_THEME="3den"
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
@@ -22,7 +23,7 @@ KEYTIMEOUT=1
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(z brew cpanm docker git git-extras git-hubflow github gem bundler nvm osx postgres rake rails rbenv tmux ssh-agent tmuxinator vundle vi-mode copydir history web-search fastd virtualenv virtualenvwrapper clipboard)
+plugins=(z brew cpanm docker git git-extras git-hubflow github gem bundler nvm osx postgres rake rails rbenv tmux ssh-agent tmuxinator vundle vi-mode copydir history web-search fastd virtualenv clipboard)
 
 source $ZSH/oh-my-zsh.sh
 
