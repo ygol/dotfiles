@@ -58,22 +58,7 @@ Bundle 'mivok/vimtodo'
 Bundle 'zah/nimrod.vim'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'janko-m/vim-test'
-
-" Let's switch to Vim-Plug
-
-" Specify a directory for plugins
-call plug#begin('~/.vim/plugged')
-
-" My Plugins
-Plug 'nvie/vim-flake8'
-Plug 'garbas/vim-snipmate'
-
-
-
-
-
-" Initialize plugin system
-call plug#end()
+Bundle 'nvie/vim-flake8'
 
 
 
