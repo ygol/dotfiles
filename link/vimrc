@@ -59,10 +59,11 @@ Bundle 'zah/nimrod.vim'
 Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'janko-m/vim-test'
 Bundle 'nvie/vim-flake8'
+Bundle 'dracula/vim'
 
 
-
-colorscheme onedark
+"colorscheme onedark
+colorscheme dracula
 filetype plugin indent on
 syntax on
 set number
@@ -114,7 +115,8 @@ let g:jekyll_path = "~/Source/blog"
 let g:syntastic_javascript_checkers = ['jsxhint']
 let g:pandoc#modules#disabled = ["folding"]
 "let g:pandoc#formatting#mode = 'ha'
-let g:pandoc#formatting#textwidth = 79
+"let g:pandoc#formatting#textwidth = 79
+let g:pandoc#formatting#textwidth = 150
 
 
 autocmd FileType ruby,eruby let g:rubycomplete_buffer_loading = 1
@@ -124,7 +126,8 @@ autocmd BufNewFile,BufReadPost *.go set filetype=go
 autocmd FileType go compiler go
 autocmd FileType go autocmd BufWritePre <buffer> GoFmt
 autocmd BufNewFile,BufRead *.tt setf tt2
-au BufRead,BufNewFile *.md,*.markdown setlocal textwidth=79 wrap linebreak nolist
+au BufRead,BufNewFile *.md,*.markdown setlocal textwidth=150 wrap linebreak nolist
+"au BufRead,BufNewFile *.md,*.markdown setlocal textwidth=79 wrap linebreak nolist
 
 
 
