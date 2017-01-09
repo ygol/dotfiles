@@ -7,6 +7,8 @@ ZSH_CUSTOM=$HOME/.dotfiles/conf/zsh
 # Set name of the theme to load.
 DEFAULT_USER='ygol'
 
+#ZSH_THEME="pure"
+#ZSH_THEME="robbyrussell"
 ZSH_THEME="agnoster"
 #ZSH_THEME="3den"
 
