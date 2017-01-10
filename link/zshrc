@@ -14,11 +14,10 @@ DEFAULT_USER='Ygol'
 ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # New conf from: https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config#tritlos-configuration
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status context dir)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(vcs ip )
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status context dir vcs)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv ip )
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
-POWERLEVEL9K_BATTERY_ICON="B"
+# POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 
 local user_symbol="$"
@@ -27,9 +26,8 @@ if [[ $(print -P "%#") =~ "#" ]]; then
 fi
 
 POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="$user_symbol "
-POWERLEVEL9K_SHOW_CHANGESET=true
-POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
-POWERLEVEL9K_TIME_FORMAT="%D{%F %T}"
+# POWERLEVEL9K_SHOW_CHANGESET=true
+# POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
