@@ -3,6 +3,8 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+Plugin 'gmarik/vundle'
+
 " Plugin 'elzr/vim-json'
 " Plugin 'airblade/vim-gitgutter'
 " Plugin 'fatih/vim-go'
@@ -12,54 +14,52 @@ Plugin 'pearofducks/ansible-vim'
 Plugin 'christoomey/vim-tmux-navigator'
 "Plugin 'edkolev/tmuxline.vim'
 Plugin 'glench/Vim-Jinja2-Syntax'
-Plugin 'gmarik/vundle'
 Plugin 'godlygeek/tabular'
 Plugin 'honza/vim-snippets'
-Plugin 'jazzCore/ctrlp-cmatcher'
+" Plugin 'jazzCore/ctrlp-cmatcher'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'mattn/gist-vim'
+" Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 " Plugin 'ngmy/vim-rubocop'
-Plugin 'othree/html5.vim'
+" Plugin 'othree/html5.vim'
 " Plugin 'klen/python-mode'
 Plugin 'pangloss/vim-javascript'
-Plugin 'rizzatti/dash.vim'
-Plugin 'rizzatti/funcoo.vim'
+" Plugin 'rizzatti/dash.vim'
+" Plugin 'rizzatti/funcoo.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'sirVer/ultisnips'
-Plugin 'spllr/vim-padrino'
+" Plugin 'spllr/vim-padrino'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tomtom/tlib_vim'
-Plugin 'tomtom/vimtlib'
+" Plugin 'tomtom/tlib_vim'
+" Plugin 'tomtom/vimtlib'
 " Plugin 'tonchis/vim-to-github'
 Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-endwise'
-Plugin 'lambdalisue/vim-gita'
-Plugin 'tpope/vim-rake'
+" Plugin 'tpope/vim-endwise'
+" Plugin 'lambdalisue/vim-gita'
+" Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-speeddating'
 Plugin 'tpope/vim-commentary'
 Plugin 'Valloric/YouCompleteMe'
 " Plugin 'vim-pandoc/vim-pandoc'
-Plugin 'hokaccha/vim-prove'
+" Plugin 'hokaccha/vim-prove'
 " Plugin 'vim-pandoc/vim-pandoc-syntax'
-Plugin 'vim-perl/vim-perl'
+" Plugin 'vim-perl/vim-perl'
 " Plugin 'vim-ruby/vim-ruby'
-Plugin 'yko/mojo.vim'
-Plugin 'mivok/vimtodo'
-Plugin 'zah/nimrod.vim'
+" Plugin 'yko/mojo.vim'
+" Plugin 'mivok/vimtodo'
+" Plugin 'zah/nimrod.vim'
 Plugin 'bronson/vim-trailing-whitespace'
-Plugin 'janko-m/vim-test'
+" Plugin 'janko-m/vim-test'
 Plugin 'nvie/vim-flake8'
 Plugin 'gregsexton/MatchTag'
 
-Plugin 'Townk/vim-autoclose'
+Plugin 'jiangmiao/auto-pairs'
+" Plugin 'Townk/vim-autoclose'
 Plugin 'vim-scripts/closetag.vim'
 
 " For OrgMode
@@ -69,6 +69,8 @@ Plugin 'taglist.vim'
 Plugin 'chrisbra/NrrwRgn'
 Plugin 'mattn/calendar-vim'
 Plugin 'vim-scripts/SyntaxRange'
+Plugin 'tpope/vim-speeddating'
+Plugin 'tpope/vim-repeat'
 
 " Themes
 Plugin 'joshdick/onedark.vim'
@@ -229,16 +231,16 @@ let g:ansible_extra_syntaxes = "sh.vim perl.vim"
 
 :autocmd BufRead,BufNewFile /home/ygol/Source/_rg/* call SetRgOptions()
 
-function! SetRgOptions()
-  let g:syntastic_enable_perl_checker = 1
-  setlocal tabstop=4 shiftwidth=4
-  let g:syntastic_perl_lib_path = [ "./lib", "./lib/auto", "/home/marcus/Source/_rg/libraries/lib" ]
-  let g:syntastic_perl_args_after = '--quiet --nocolor --verbose "\%s:\%f:\%l:\%c:(\%s) \%m (\%e)\n" -p ~/Source/_rg/libraries/.perlcriticrc'
-  let g:syntastic_perl_checkers = ['perl','perlcritic']
-endfunction
+" function! SetRgOptions()
+"   let g:syntastic_enable_perl_checker = 1
+"   setlocal tabstop=4 shiftwidth=4
+"   let g:syntastic_perl_lib_path = [ "./lib", "./lib/auto", "/home/marcus/Source/_rg/libraries/lib" ]
+"   let g:syntastic_perl_args_after = '--quiet --nocolor --verbose "\%s:\%f:\%l:\%c:(\%s) \%m (\%e)\n" -p ~/Source/_rg/libraries/.perlcriticrc'
+"   let g:syntastic_perl_checkers = ['perl','perlcritic']
+" endfunction
 
-command -range=% -nargs=* Tidy <line1>,<line2>!
-  \perltidy <args>
+" command -range=% -nargs=* Tidy <line1>,<line2>!
+"   \perltidy <args>
 
 "Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
 "If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
@@ -294,13 +296,12 @@ map <Leader>co ggVG"*y
 " Open help in new tab
 cabbrev help tab help
 cabbrev h tab h
-
 " Vim Flake8 shortcut change to F5 to reflect old pep8 plugin
 autocmd FileType python map <buffer> <F5> :call Flake8()<CR>
 " Automatically execute flake8 validation on python file write
 autocmd BufWritePost *.py call Flake8()
 
-"Value for snippet
-let g:snips_author="Yves, Goldberg"
-"" Shortcut to reload snippets
-noremap <silent><F6> :call ResetSnippets()<CR>:call GetSnippets(snippets_dir, &ft)<CR>
+let t_Co=256
+au! BufRead,BufNewFile *.rml set ft=xml
+au! BufRead,BufNewFile .openerprc set ft=cfg
+
