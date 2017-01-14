@@ -304,4 +304,5 @@ autocmd BufWritePost *.py call Flake8()
 let t_Co=256
 au! BufRead,BufNewFile *.rml set ft=xml
 au! BufRead,BufNewFile .openerprc set ft=cfg
-
+let g:pep8_ignore="E501"
+let g:syntastic_python_flake8_args='--ignore=E501'
