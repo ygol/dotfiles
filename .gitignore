@@ -12,3 +12,8 @@ link/vim/.netrwhist
 *LOCAL*
 *.py[cod]
 *.bak
+.DS_Store
+link/.DS_Store
+link/tmux/resurrect/
+link/vim/.DS_Store
+
