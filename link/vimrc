@@ -59,8 +59,16 @@ Plugin 'janko-m/vim-test'
 Plugin 'nvie/vim-flake8'
 Plugin 'gregsexton/MatchTag'
 
-" Module from vim-openerp
-Plugin 'garbas/vim-snipmate'
+Plugin 'Townk/vim-autoclose'
+Plugin 'vim-scripts/closetag.vim'
+
+" For OrgMode
+Plugin 'jceb/vim-orgmode'
+Plugin 'vim-scripts/utl.vim'
+Plugin 'taglist.vim'
+Plugin 'chrisbra/NrrwRgn'
+Plugin 'mattn/calendar-vim'
+Plugin 'vim-scripts/SyntaxRange'
 
 " Themes
 Plugin 'joshdick/onedark.vim'

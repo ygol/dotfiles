@@ -15,7 +15,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # New conf from: https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config#tritlos-configuration
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv ip )
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv vi-mode ip )
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 # POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
@@ -124,9 +124,11 @@ ensure_tmux_is_running() {
 ensure_tmux_is_running
 
 # my Aliases
+alias vim='mvim -v'
 # convenience aliases for editing configs
 alias ev='vim ~/.vimrc'
 alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
+alias org='vim ~/Dropbox/Org/ygol_mlo.org'
 
 alias cl='clear'
