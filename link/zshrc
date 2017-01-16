@@ -125,7 +125,9 @@ ensure_tmux_is_running() {
 ensure_tmux_is_running
 
 # my Aliases
-alias vim='mvim -v'
+if [ "$(uname 2> /dev/null)" = "Darwin"  ]; then
+      alias vim='mvim -v'
+fi
 # convenience aliases for editing configs
 alias ev='vim ~/.vimrc'
 alias et='vim ~/.tmux.conf'
