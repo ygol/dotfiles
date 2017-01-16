@@ -1,8 +1,5 @@
-# Sample gitconfig
-#
-# You probably want to change the [user] section here since you are not me.
-# Also search in this file for FIXME- you'll want to well, fix them.
-
+[github]
+  user = ygol
 [hub]
         protocol = https
 [user]
@@ -30,6 +27,14 @@
     publish = !legit publish \"$@\"
     graft = !legit graft \"$@\"
     ca = commit --amend --reuse-message=HEAD
+    s = status -s
+    lg = log --oneline --decorate --all --graph
+    glog = log -E -i --grep
+    sla = log --oneline --decorate --graph --all -20
+    car = commit --amend --no-edit
+    unstage = reset
+    unchange = checkout --
+    uncommit = reset --soft HEAD^
 [color]
         diff = auto
         status = auto
@@ -71,3 +76,9 @@
   insteadOf = n:
 [url "git@github.com:"]
   insteadOf = gh:
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
