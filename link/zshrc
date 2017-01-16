@@ -11,7 +11,8 @@ DEFAULT_USER='Ygol'
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="agnoster"
 #ZSH_THEME="3den"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="cjt"
+# ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # New conf from: https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config#tritlos-configuration
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status context dir vcs)
