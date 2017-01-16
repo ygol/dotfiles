@@ -135,3 +135,12 @@ alias ez='vim ~/.zshrc'
 alias org='vim ~/Dropbox/Org/ygol_mlo.org'
 
 alias cl='clear'
+compdef g=git
+function g {
+  if [[ $# -gt 0  ]]; then
+        git "$@"
+          else
+                git status --short --branch
+                  fi
+
+}
