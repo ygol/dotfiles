@@ -7,18 +7,18 @@ ZSH_CUSTOM=$HOME/.dotfiles/conf/zsh
 # Set name of the theme to load.
 DEFAULT_USER='Ygol'
 
-#ZSH_THEME="pure"
+# ZSH_THEME="pure"
 #ZSH_THEME="robbyrussell"
 #ZSH_THEME="agnoster"
 #ZSH_THEME="3den"
-ZSH_THEME="cjt"
-# ZSH_THEME="powerlevel9k/powerlevel9k"
+# ZSH_THEME="cjt"
+ZSH_THEME="powerlevel9k/powerlevel9k"
 
 # New conf from: https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config#tritlos-configuration
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv vi_mode ip )
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv vi_mode )
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-# POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
+POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 
 local user_symbol="$"
@@ -26,9 +26,9 @@ if [[ $(print -P "%#") =~ "#" ]]; then
   user_symbol = "#"
 fi
 
-POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="$user_symbol "
-# POWERLEVEL9K_SHOW_CHANGESET=true
-# POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
+# POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="$user_symbol "
+POWERLEVEL9K_SHOW_CHANGESET=true
+POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
@@ -43,7 +43,7 @@ KEYTIMEOUT=1
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(z brew cpanm docker git git-extras git-hubflow github gem bundler nvm osx postgres rake rails rbenv tmux ssh-agent tmuxinator vundle vi-mode copydir history web-search fastd virtualenv clipboard)
+plugins=(z brew cpanm docker git git-extras git-hubflow github gem bundler nvm osx postgres rake tmux ssh-agent tmuxinator vundle vi-mode copydir history web-search fastd virtualenv clipboard)
 
 source $ZSH/oh-my-zsh.sh
 
