@@ -1,5 +1,3 @@
-[github]
-  user = ygol
 [hub]
         protocol = https
 [user]
@@ -11,7 +9,6 @@
     wtf     = !$ZSH/bin/git-wtf
     rank-contributers = !$ZSH/bin/git-rank-contributers
     count   = !git shortlog -sn
-    co = checkout
     st = status
     ci = commit
     br = branch
@@ -35,6 +32,7 @@
     unstage = reset
     unchange = checkout --
     uncommit = reset --soft HEAD^
+    co = checkout
 [color]
         diff = auto
         status = auto
@@ -68,12 +66,8 @@
         prompt = false
 [help]
         autocorrect = 1
-[push]
-    default = matching
 [rerere]
     enabled = true
-[url "git@git.nordaaker.com:"]
-  insteadOf = n:
 [url "git@github.com:"]
   insteadOf = gh:
 [difftool "sourcetree"]
@@ -82,3 +76,13 @@
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
+
+# New
+[merge]
+      ff = only
+[fetch]
+      prune = true
+[push]
+    default = upstream
+[github]
+  user = ygol
