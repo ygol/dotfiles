@@ -3,6 +3,9 @@ export PATH=~/.dotfiles/bin:$PATH
 ZSH=$HOME/.dotfiles/libs/oh-my-zsh
 ZSH_CUSTOM=$HOME/.dotfiles/conf/zsh
 
+for zsh_source in $HOME/.dotfiles/conf/zsh/config/*.zsh; do
+    source $zsh_source
+done
 
 # Set name of the theme to load.
 DEFAULT_USER='Ygol'
