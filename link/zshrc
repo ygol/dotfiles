@@ -12,22 +12,17 @@ DEFAULT_USER='Ygol'
 #ZSH_THEME="agnoster"
 #ZSH_THEME="3den"
 # ZSH_THEME="cjt"
-ZSH_THEME="powerlevel9k/powerlevel9k"
+ZSH_THEME="spaceship"
+# ZSH_THEME="powerlevel9k/powerlevel9k"
+
+SPACESHIP_RUBY_SHOW=false
 
 # New conf from: https://github.com/bhilburn/powerlevel9k/wiki/Show-Off-Your-Config#tritlos-configuration
-<<<<<<< Updated upstream
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv vi_mode )
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
-POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
-=======
 # POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(status context dir vcs)
 # POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(virtualenv vi_mode ip )
 # POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 # POWERLEVEL9K_RPROMPT_ON_NEWLINE=true
 # POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
->>>>>>> Stashed changes
 
 # local user_symbol="$"
 # if [[ $(print -P "%#") =~ "#" ]]; then
@@ -35,13 +30,8 @@ POWERLEVEL9K_MULTILINE_FIRST_PROMPT_PREFIX=""
 # fi
 
 # POWERLEVEL9K_MULTILINE_SECOND_PROMPT_PREFIX="$user_symbol "
-<<<<<<< Updated upstream
-POWERLEVEL9K_SHOW_CHANGESET=true
-POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
-=======
 # POWERLEVEL9K_SHOW_CHANGESET=true
 # POWERLEVEL9K_CHANGESET_HASH_LENGTH=6
->>>>>>> Stashed changes
 
 # Set to this to use case-sensitive completion
 CASE_SENSITIVE="true"
@@ -82,10 +72,6 @@ bindkey '^k' kill-line
 bindkey -a u undo
 bindkey -a '^R' redo
 bindkey '^G' what-cursor-position
-
-
-
-
 
 # Source all files in ~/.dotfiles/source/
 function src() {
