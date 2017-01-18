@@ -26,3 +26,5 @@ alias vi="vim -u ~/.vimrc.mini"
 export PS1="\\u@\h \\W]\\$"
 alias fuck='sudo $(fc -ln -1)'
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

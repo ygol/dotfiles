@@ -143,3 +143,5 @@ function g {
                   fi
 
 }
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
