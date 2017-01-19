@@ -107,6 +107,9 @@ set clipboard=unnamed
 set directory=/tmp
 set pastetoggle=<leader>v
 
+set splitbelow
+set splitright
+
 set laststatus=2
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]\ [BUF=%n]\ %{strftime(\"%d-%m-%Y\ %H:%M:%S\",getftime(expand(\"%:p\")))}
 
