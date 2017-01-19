@@ -16,7 +16,8 @@
     ci = commit
     co = checkout
     copysha = "!git rev-parse HEAD | tr -d '\n' | pbcopy"
-    count = !git log --oneline | wc -l | awk '{print $1}'ount   = !git shortlog -sn
+    count = !git log --oneline | wc -l | awk '{print $1}'
+    ; count = !git rev-list --count HEAD ^master
     dc = diff --word-diff --cached --color-words
     df = diff --word-diff --color-words
     fall = "!for remote in $(git remote); do echo "Fetching $remote"; git fetch "$remote"; done"
@@ -86,6 +87,7 @@
 [core]
     excludesfile = ~/.gitignore
     whitespace = trailing-space,space-before-tab
+    pager = less -F -X
 [apply]
     whitespace = nowarn
 [advice]
