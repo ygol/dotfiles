@@ -7,7 +7,7 @@ PATH=/usr/local/sbin:$(path_remove /usr/local/sbin)
 PATH=~/.dotfiles/bin/osx:$(path_remove ~/.dotfiles/bin/osx)
 export PATH
 
-export GOPATH=/Users/marcus/gocode
+export GOPATH=/Users/Ygol/gocode
 export GOROOT=/usr/local/Cellar/go/1.5.3/libexec
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export JAVA_HOME="$(/usr/libexec/java_home)"
