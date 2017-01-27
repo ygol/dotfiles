@@ -9,7 +9,7 @@ function e_arrow()    { echo -e " \033[1;33m➜\033[0m  $@"; }
 
 
 # If the old files isn't removed, the duplicate APT alias will break sudo!
-sudoers_old="/etc/sudoers.d/sudoers-marcus"; [[ -e "$sudoers_old" ]] && sudo rm "$sudoers_old"
+sudoers_old="/etc/sudoers.d/sudoers-ygol"; [[ -e "$sudoers_old" ]] && sudo rm "$sudoers_old"
 
 # Installing this sudoers file makes life easier.
 sudoers_file="sudoers-dotfiles"
