@@ -1,15 +1,17 @@
 # OSX-only stuff. Abort if not OSX.
 [[ "$OSTYPE" =~ ^darwin ]] || return 1
 
+## ygol 07.10.17: had to comment the following block as it broke git.
+##
 # APPLE, Y U PUT /usr/bin B4 /usr/local/bin?!
-PATH=/usr/local/bin:$(path_remove /usr/local/bin)
-PATH=/usr/local/sbin:$(path_remove /usr/local/sbin)
-PATH=~/.dotfiles/bin/osx:$(path_remove ~/.dotfiles/bin/osx)
-export PATH
+# PATH=/usr/local/bin:$(path_remove /usr/local/bin)
+# PATH=/usr/local/sbin:$(path_remove /usr/local/sbin)
+# PATH=~/.dotfiles/bin/osx:$(path_remove ~/.dotfiles/bin/osx)
+# export PATH
 
-export GOPATH=/Users/Ygol/gocode
-export GOROOT=/usr/local/Cellar/go/1.5.3/libexec
-export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+# export GOPATH=/Users/Ygol/gocode
+# export GOROOT=/usr/local/Cellar/go/1.5.3/libexec
+# export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export JAVA_HOME="$(/usr/libexec/java_home)"
 
 

@@ -48,7 +48,7 @@ KEYTIMEOUT=1
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-# plugins=(z brew cpanm docker git git-extras git-hubflow github gem bundler nvm osx postgres rake tmux ssh-agent tmuxinator vundle vi-mode copydir history web-search fastd virtualenv clipboard zsh-syntax-highlighting)
+plugins=(z brew cpanm docker git git-extras git-hubflow github gem bundler nvm osx postgres rake ssh-agent vundle vi-mode copydir history web-search fastd virtualenv virtualenvwrapper clipboard zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,7 +95,7 @@ src
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
+# export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 if [ "$TERM_PROGRAM" = "iTerm" ]; then
   test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
@@ -109,15 +109,15 @@ export PATH=~/bin:$PATH
 export TERM="xterm-256color"
 
 # Add this to your zshrc or bzshrc file
-_not_inside_tmux() { [[ -z "$TMUX" ]] }
+# _not_inside_tmux() { [[ -z "$TMUX" ]] }
 
-ensure_tmux_is_running() {
-  if _not_inside_tmux; then
-    tat
-  fi
-}
+# ensure_tmux_is_running() {
+#   if _not_inside_tmux; then
+#     tat
+#   fi
+# }
 
-ensure_tmux_is_running
+# ensure_tmux_is_running
 
 # my Aliases
 if [ "$(uname 2> /dev/null)" = "Darwin"  ]; then
