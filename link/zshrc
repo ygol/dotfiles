@@ -127,8 +127,10 @@ fi
 alias ev='vim ~/.vimrc'
 alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
+# alias ez='em ~/.zshrc'
 alias org='vim ~/Dropbox/Org/ygol_mlo.org'
 alias sz='source ~/.zshrc'
+alias em='/Applications/Emacs.app/Contents/MacOS/Emacs'
 
 alias cl='clear'
 
