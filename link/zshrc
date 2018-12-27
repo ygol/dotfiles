@@ -2,7 +2,7 @@ export PATH=~/.dotfiles/bin:$PATH
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.dotfiles/libs/oh-my-zsh
 ZSH_CUSTOM=$HOME/.dotfiles/conf/zsh
-
+export PKG_CONFIG_PATH=/opt/local/lib/pkgconfig
 export WORKON_HOME=~/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 

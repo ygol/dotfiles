@@ -1,5 +1,6 @@
 # Add binaries into the path
 PATH=~/.dotfiles/bin:$PATH
+PATH=/Users/Ygol/Library/Python/3.6/bin:$PATH
 export PATH
 
 # Source all files in ~/.dotfiles/source/
@@ -28,3 +29,8 @@ alias fuck='sudo $(fc -ln -1)'
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages:$PYTHONPATH
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+export COMPOSE_IMPERSONATION='501:20'
+
+# Setting for the new UTF-8 terminal support in Lion
+export LC_CTYPE=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
